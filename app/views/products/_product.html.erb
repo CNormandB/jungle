@@ -5,7 +5,13 @@
       <span><%= product.name %></span>
       <span><%= humanized_money_with_symbol product.price %></span>
     </h1>
-  <% end%>
+  <% end %>
+
+  <!-- Category selection dropdown -->
+  <div class="field">
+    <%= form.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+
   <div class="buttonAndBadge">
   <% if product.quantity.zero? %>
     <!-- Product is sold out -->
@@ -19,5 +25,5 @@
       <%= fa_icon "shopping-cart", text: 'Add', class: 'add-button' %> 
     <% end %>
   <% end %>
-</div>
+  </div>
 </article>
