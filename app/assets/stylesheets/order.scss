@@ -1,0 +1,18 @@
+.orders-show {
+  .table-bordered {
+    width: 100%;
+    table-layout: auto;
+  }
+  table {
+    th {
+      padding: 10px; 
+      padding-left: 5px;
+    }
+    td{
+      padding: 5px;
+    }
+  }
+  .product-image{
+    width: 10em;
+  }
+}

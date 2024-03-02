@@ -9,7 +9,7 @@
   </div>
 
   <div class="panel panel-default items">
-  <table class="table table-bordered">
+  <table class="table-bordered">
     <thead>
       <tr>
         <th>Image</th>
@@ -32,8 +32,8 @@
     </tbody>
     <tfoot>
       <tr>
-        <th colspan="5">Final Amount:</th>
-        <th><%= humanized_money_with_symbol @order.total %></th>
+      <th colspan="4">Final Amount:</th> <!-- Match the colspan with the number of columns in the table -->
+      <th><%= humanized_money_with_symbol @order.total %></th>
       </tr>
     </tfoot>
   </table>
