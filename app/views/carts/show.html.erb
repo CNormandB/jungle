@@ -4,7 +4,12 @@
     <h1>My Cart</h1>
   </header>
 
-  <div class="panel panel-default items">
+  <% if enhanced_cart.empty? %>
+    <p>Uh-oh! Looks like you wandered into an empty jungle!</p>
+    <%= link_to "Explore More", root_path, style: "background-color: rgba(0, 130, 29, 1); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;" %>
+    
+  <% else %>
+    <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -48,5 +53,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
